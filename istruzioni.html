@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Proposta Progetto — Casa Spanu</title>
+
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Vue -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,488 +39,260 @@
 </head>
 
 <body>
-
-    <div id="app">
-
-        <!-- HERO -->
-        <section class="relative overflow-hidden bg-[#0b2c5f] text-white">
-
-            <div class="absolute inset-0 opacity-10">
-                <div
-                    class="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl translate-x-[-20%] translate-y-[-20%]">
-                </div>
-                <div
-                    class="absolute bottom-0 right-0 w-96 h-96 bg-cyan-300 rounded-full blur-3xl translate-x-[20%] translate-y-[20%]">
-                </div>
-            </div>
-
-            <div class="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
-
-                <div
-                    class="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.25em] uppercase mb-8">
-                    Proposta Progetto Web
-                </div>
-
-                <h1 class="serif text-5xl md:text-7xl leading-none font-light max-w-4xl mb-8 tracking-tight">
-                    Casa Spanu
-                </h1>
-
-                <p class="max-w-3xl text-lg text-white/80 leading-relaxed">
-                    Realizzazione di un sito web moderno, elegante e professionale
-                    per valorizzare la struttura, aumentare le prenotazioni dirette
-                    e migliorare la presenza online.
-                </p>
-
-            </div>
-        </section>
-
-        <!-- INTRO -->
-        <section class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-                <div>
-                    <div class="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
-                        Obiettivo del progetto
-                    </div>
-
-                    <h2 class="serif text-5xl text-slate-900 leading-tight mb-8">
-                        Creare una presenza online moderna e autorevole
-                    </h2>
-
-                    <p class="text-slate-600 leading-relaxed mb-6">
-                        Il sito dovrà trasmettere eleganza, natura, comfort e autenticità,
-                        aiutando i visitatori a comprendere immediatamente il valore della struttura.
-                    </p>
-
-                    <p class="text-slate-600 leading-relaxed">
-                        L’obiettivo principale sarà trasformare i visitatori in richieste
-                        di prenotazione reali, semplificando il contatto diretto con la struttura.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-2 gap-5">
-
-                    <div class="glass rounded-3xl p-8 shadow-xl border border-white">
-                        <div class="text-4xl mb-4">🏖️</div>
-                        <h3 class="font-semibold text-lg mb-3">Esperienza</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Valorizzare mare, spiaggia, relax e territorio.
-                        </p>
-                    </div>
-
-                    <div class="glass rounded-3xl p-8 shadow-xl border border-white mt-10">
-                        <div class="text-4xl mb-4">📱</div>
-                        <h3 class="font-semibold text-lg mb-3">Mobile First</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Sito ottimizzato per smartphone e prenotazioni rapide.
-                        </p>
-                    </div>
-
-                    <div class="glass rounded-3xl p-8 shadow-xl border border-white -mt-4">
-                        <div class="text-4xl mb-4">✨</div>
-                        <h3 class="font-semibold text-lg mb-3">Immagine Premium</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Design moderno ed elegante per aumentare fiducia e valore percepito.
-                        </p>
-                    </div>
-
-                    <div class="glass rounded-3xl p-8 shadow-xl border border-white mt-6">
-                        <div class="text-4xl mb-4">📈</div>
-                        <h3 class="font-semibold text-lg mb-3">Prenotazioni</h3>
-                        <p class="text-sm text-slate-600 leading-relaxed">
-                            Maggiore conversione grazie a contenuti chiari e sistema contatti efficace.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- SECTIONS -->
-        <section class="bg-white border-y border-slate-200">
-
-            <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20">
-
-                <div class="mb-16">
-
-                    <div class="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
-                        Elementi principali
-                    </div>
-
-                    <h2 class="serif text-5xl text-slate-900">
-                        Cosa verrà realizzato
-                    </h2>
-
-                </div>
-
-                <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-                    <div v-for="item in sections"
-                        class="rounded-3xl border border-slate-200 p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-white">
-
-                        <div class="text-4xl mb-6">
-                            {{ item.icon }}
-                        </div>
-
-                        <h3 class="text-xl font-semibold text-slate-900 mb-4">
-                            {{ item.title }}
-                        </h3>
-
-                        <p class="text-slate-600 leading-relaxed text-sm mb-6">
-                            {{ item.description }}
-                        </p>
-
-                        <ul class="space-y-3">
-                            <li v-for="feature in item.features" class="flex items-start gap-3 text-sm text-slate-700">
-                                <span class="text-blue-700 mt-1">•</span>
-                                <span>{{ feature }}</span>
-                            </li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- BOOKING -->
-        <section class="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-
-                <div>
-
-                    <div class="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
-                        Sistema Prenotazioni
-                    </div>
-
-                    <h2 class="serif text-5xl text-slate-900 leading-tight mb-8">
-                        Soluzione semplice, efficace e scalabile
-                    </h2>
-
-                    <div class="space-y-6">
-
-                        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-                            <h3 class="font-semibold text-lg mb-3">
-                                Fase iniziale
-                            </h3>
-
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Sistema semplice con richiesta disponibilità,
-                                invio email e contatto diretto WhatsApp.
-                            </p>
-                        </div>
-
-                        <div class="bg-white rounded-2xl border border-slate-200 p-6">
-                            <h3 class="font-semibold text-lg mb-3">
-                                Evoluzione futura
-                            </h3>
-
-                            <p class="text-slate-600 text-sm leading-relaxed">
-                                Possibilità di integrare calendario disponibilità,
-                                pannello amministrazione, gestione prenotazioni
-                                e sincronizzazione con Booking/Airbnb.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="bg-[#0b2c5f] rounded-[2rem] p-10 text-white shadow-2xl">
-
-                    <div class="text-3xl mb-8">
-                        📅
-                    </div>
-
-                    <h3 class="text-3xl serif mb-8">
-                        Funzionalità previste
-                    </h3>
-
-                    <div class="space-y-5">
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-2 h-2 rounded-full bg-cyan-300 mt-2"></div>
-                            <div>Richiesta disponibilità online</div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-2 h-2 rounded-full bg-cyan-300 mt-2"></div>
-                            <div>Contatto rapido WhatsApp</div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-2 h-2 rounded-full bg-cyan-300 mt-2"></div>
-                            <div>Gestione stagioni e prezzi</div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-2 h-2 rounded-full bg-cyan-300 mt-2"></div>
-                            <div>Form di contatto professionali</div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-2 h-2 rounded-full bg-cyan-300 mt-2"></div>
-                            <div>Mappe e indicazioni stradali</div>
-                        </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-2 h-2 rounded-full bg-cyan-300 mt-2"></div>
-                            <div>Integrazione recensioni e social</div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- ROADMAP -->
-        <section class="bg-slate-50 border-t border-slate-200">
-
-            <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24">
-
-                <div class="mb-20">
-
-                    <div class="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
-                        Roadmap
-                    </div>
-
-                    <h2 class="serif text-5xl text-slate-900">
-                        Fasi del progetto
-                    </h2>
-
-                </div>
-
-                <div class="grid md:grid-cols-2 xl:grid-cols-5 gap-6">
-
-                    <div v-for="(phase, index) in phases"
-                        class="relative bg-white border border-slate-200 rounded-3xl p-8">
-
-                        <div
-                            class="absolute -top-4 left-8 bg-[#0b2c5f] text-white w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold shadow-lg">
-                            {{ index + 1 }}
-                        </div>
-
-                        <div class="pt-6">
-
-                            <h3 class="font-semibold text-xl mb-4">
-                                {{ phase.title }}
-                            </h3>
-
-                            <p class="text-sm text-slate-600 leading-relaxed">
-                                {{ phase.description }}
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-        <!-- FOOTER -->
-        <footer class="bg-[#0b2c5f] text-white">
-
-            <div class="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-
-                    <div>
-
-                        <div class="text-sm uppercase tracking-[0.25em] text-cyan-200 mb-4">
-                            Conclusione
-                        </div>
-
-                        <h2 class="serif text-5xl leading-tight mb-6">
-                            Un sito pensato per valorizzare davvero la struttura
-                        </h2>
-
-                        <p class="text-white/70 leading-relaxed max-w-2xl">
-                            L’obiettivo finale sarà creare una presenza online moderna,
-                            autorevole e semplice da utilizzare, capace di comunicare
-                            immediatamente qualità, relax e professionalità.
-                        </p>
-
-                    </div>
-
-                    <div class="bg-white/10 border border-white/10 rounded-3xl p-8">
-
-                        <div class="space-y-5 text-sm">
-
-                            <div class="flex justify-between border-b border-white/10 pb-3">
-                                <span class="text-white/60">Design moderno</span>
-                                <span>✓</span>
-                            </div>
-
-                            <div class="flex justify-between border-b border-white/10 pb-3">
-                                <span class="text-white/60">Versione mobile</span>
-                                <span>✓</span>
-                            </div>
-
-                            <div class="flex justify-between border-b border-white/10 pb-3">
-                                <span class="text-white/60">Sistema prenotazioni</span>
-                                <span>✓</span>
-                            </div>
-
-                            <div class="flex justify-between border-b border-white/10 pb-3">
-                                <span class="text-white/60">SEO e Google</span>
-                                <span>✓</span>
-                            </div>
-
-                            <div class="flex justify-between border-b border-white/10 pb-3">
-                                <span class="text-white/60">Social e recensioni</span>
-                                <span>✓</span>
-                            </div>
-
-                            <div class="flex justify-between">
-                                <span class="text-white/60">Multilingua</span>
-                                <span>✓</span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </footer>
-
-    </div>
-
-    <script>
-        const { createApp } = Vue;
-
-        createApp({
-
-            data() {
-
-                return {
-
-                    sections: [
-
-                        {
-                            icon: '🎨',
-                            title: 'Logo e Identità',
-                            description: 'Creazione o miglioramento dell’identità visiva della struttura.',
-                            features: [
-                                'Logo professionale',
-                                'Palette colori',
-                                'Immagine coordinata',
-                                'Versione social'
-                            ]
-                        },
-
-                        {
-                            icon: '📝',
-                            title: 'Contenuti',
-                            description: 'Testi professionali e chiari per presentare la struttura.',
-                            features: [
-                                'Descrizione alloggi',
-                                'Servizi',
-                                'Territorio',
-                                'Esperienze ed escursioni'
-                            ]
-                        },
-
-                        {
-                            icon: '📸',
-                            title: 'Foto e Video',
-                            description: 'Immagini e contenuti visuali ad alta qualità.',
-                            features: [
-                                'Foto professionali',
-                                'Video drone',
-                                'Vista mare',
-                                'Atmosfera struttura'
-                            ]
-                        },
-
-                        {
-                            icon: '🏠',
-                            title: 'Schede Alloggi',
-                            description: 'Pagina dettagliata per ogni alloggio.',
-                            features: [
-                                'Posti letto',
-                                'Aria condizionata',
-                                'Servizi inclusi',
-                                'Galleria immagini'
-                            ]
-                        },
-
-                        {
-                            icon: '💶',
-                            title: 'Prezzi e Stagioni',
-                            description: 'Gestione chiara delle tariffe.',
-                            features: [
-                                'Alta stagione',
-                                'Media stagione',
-                                'Bassa stagione',
-                                'Prezzi settimanali'
-                            ]
-                        },
-
-                        {
-                            icon: '⭐',
-                            title: 'Recensioni e Social',
-                            description: 'Maggiore fiducia grazie a feedback e presenza online.',
-                            features: [
-                                'Booking',
-                                'Tripadvisor',
-                                'Instagram',
-                                'Google Maps'
-                            ]
-                        }
-
-                    ],
-
-                    phases: [
-
-                        {
-                            title: 'Materiale',
-                            description: 'Raccolta testi, foto, logo, prezzi e contenuti.'
-                        },
-
-                        {
-                            title: 'Design',
-                            description: 'Definizione dello stile grafico e struttura del sito.'
-                        },
-
-                        {
-                            title: 'Sviluppo',
-                            description: 'Realizzazione tecnica del progetto web.'
-                        },
-
-                        {
-                            title: 'Testing',
-                            description: 'Controlli mobile, performance e funzionalità.'
-                        },
-
-                        {
-                            title: 'Pubblicazione',
-                            description: 'Messa online e configurazione finale.'
-                        }
-
-                    ]
-
-                }
-
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        function App() {
+            const [data, setData] = useState(null);
+            const [loading, setLoading] = useState(true);
+
+            useEffect(() => {
+                fetch('./istruzioni.json')
+                    .then(response => response.json())
+                    .then(jsonData => {
+                        setData(jsonData);
+                        setLoading(false);
+                    })
+                    .catch(error => {
+                        console.error('Errore nel caricamento:', error);
+                        setLoading(false);
+                    });
+            }, []);
+
+            if (loading) {
+                return <div className="flex items-center justify-center h-screen text-xl">Caricamento...</div>;
             }
 
-        }).mount('#app');
-    </script>
+            if (!data) {
+                return <div className="flex items-center justify-center h-screen text-xl">Errore nel caricamento dei dati</div>;
+            }
 
+            return (
+                <>
+                    {/* HERO */}
+                    <section className="relative overflow-hidden bg-[#0b2c5f] text-white">
+                        <div className="absolute inset-0 opacity-10">
+                            <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full blur-3xl translate-x-[-20%] translate-y-[-20%]"></div>
+                            <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-300 rounded-full blur-3xl translate-x-[20%] translate-y-[20%]"></div>
+                        </div>
+
+                        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-32">
+                            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-2 text-xs tracking-[0.25em] uppercase mb-8">
+                                {data.hero.subtitle}
+                            </div>
+
+                            <h1 className="serif text-5xl md:text-7xl leading-none font-light max-w-4xl mb-8 tracking-tight">
+                                {data.hero.title}
+                            </h1>
+
+                            <p className="max-w-3xl text-lg text-white/80 leading-relaxed">
+                                {data.hero.description}
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* INTRO */}
+                    <section className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                            <div>
+                                <div className="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
+                                    {data.intro.label}
+                                </div>
+
+                                <h2 className="serif text-5xl text-slate-900 leading-tight mb-8">
+                                    {data.intro.title}
+                                </h2>
+
+                                <p className="text-slate-600 leading-relaxed mb-6">
+                                    {data.intro.description1}
+                                </p>
+
+                                <p className="text-slate-600 leading-relaxed">
+                                    {data.intro.description2}
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 gap-5">
+                                {data.highlights.map((item, idx) => (
+                                    <div key={idx} className="glass rounded-3xl p-8 shadow-xl border border-white">
+                                        <div className="text-4xl mb-4">{item.icon}</div>
+                                        <h3 className="font-semibold text-lg mb-3">{item.title}</h3>
+                                        <p className="text-sm text-slate-600 leading-relaxed">
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECTIONS */}
+                    <section className="bg-white border-y border-slate-200">
+                        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+                            <div className="mb-16">
+                                <div className="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
+                                    Elementi principali
+                                </div>
+                                <h2 className="serif text-5xl text-slate-900">
+                                    Cosa verrà realizzato
+                                </h2>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+                                {data.sections.map((item, idx) => (
+                                    <div key={idx} className="rounded-3xl border border-slate-200 p-8 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 bg-white">
+                                        <div className="text-4xl mb-6">
+                                            {item.icon}
+                                        </div>
+
+                                        <h3 className="text-xl font-semibold text-slate-900 mb-4">
+                                            {item.title}
+                                        </h3>
+
+                                        <p className="text-slate-600 leading-relaxed text-sm mb-6">
+                                            {item.description}
+                                        </p>
+
+                                        <ul className="space-y-3">
+                                            {item.features.map((feature, fidx) => (
+                                                <li key={fidx} className="flex items-start gap-3 text-sm text-slate-700">
+                                                    <span className="text-blue-700 mt-1">•</span>
+                                                    <span>{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* BOOKING */}
+                    <section className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+                        <div className="grid lg:grid-cols-2 gap-16 items-center">
+                            <div>
+                                <div className="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
+                                    {data.booking.label}
+                                </div>
+
+                                <h2 className="serif text-5xl text-slate-900 leading-tight mb-8">
+                                    {data.booking.title}
+                                </h2>
+
+                                <p className="text-slate-600 leading-relaxed mb-8">
+                                    {data.booking.description}
+                                </p>
+                            </div>
+
+                            <div className="bg-[#0b2c5f] rounded-[2rem] p-10 text-white shadow-2xl">
+                                <div className="text-3xl mb-8">
+                                    📅
+                                </div>
+
+                                <h3 className="text-3xl serif mb-8">
+                                    Funzionalità
+                                </h3>
+
+                                <div className="space-y-5">
+                                    {data.booking.features.map((feature, idx) => (
+                                        <div key={idx} className="flex items-start gap-4">
+                                            <div className="w-2 h-2 rounded-full bg-cyan-300 mt-2"></div>
+                                            <div>{feature}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* TIMELINE */}
+                    <section className="bg-slate-50 border-t border-slate-200">
+                        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+                            <div className="mb-16">
+                                <div className="text-sm uppercase tracking-[0.25em] text-blue-700 mb-4">
+                                    Fasi di realizzazione
+                                </div>
+                                <h2 className="serif text-5xl text-slate-900">
+                                    Come lavoro
+                                </h2>
+                            </div>
+
+                            <div className="grid md:grid-cols-2 xl:grid-cols-5 gap-8">
+                                {data.phases.map((phase, idx) => (
+                                    <div key={idx} className="relative">
+                                        <div className="bg-white rounded-2xl border border-slate-200 p-8 h-full">
+                                            <div className="text-3xl font-light text-blue-700 mb-4 serif">
+                                                0{idx + 1}
+                                            </div>
+                                            <h3 className="font-semibold text-lg text-slate-900 mb-3">
+                                                {phase.title}
+                                            </h3>
+                                            <p className="text-slate-600 text-sm leading-relaxed">
+                                                {phase.description}
+                                            </p>
+                                        </div>
+                                        {idx < data.phases.length - 1 && (
+                                            <div className="hidden xl:block absolute -right-4 top-1/2 transform -translate-y-1/2">
+                                                <div className="text-2xl text-slate-300">→</div>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* EDITABILITY */}
+                    <section className="bg-blue-50 border-t border-slate-200">
+                        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-20">
+                            <h2 className="serif text-5xl text-slate-900 mb-8">
+                                {data.editability.title}
+                            </h2>
+                            <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">
+                                {data.editability.description}
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* FOOTER */}
+                    <footer className="bg-[#0b2c5f] text-white border-t-4 border-cyan-300">
+                        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
+                            <div className="grid lg:grid-cols-2 gap-16">
+                                <div>
+                                    <div className="text-sm uppercase tracking-[0.25em] text-cyan-300 mb-4">
+                                        {data.deliverables.label}
+                                    </div>
+
+                                    <h2 className="serif text-4xl leading-tight mb-8">
+                                        {data.deliverables.title}
+                                    </h2>
+
+                                    <p className="text-white/70 leading-relaxed">
+                                        {data.deliverables.description}
+                                    </p>
+                                </div>
+
+                                <div className="bg-white/10 border border-white/10 rounded-3xl p-8">
+                                    <div className="space-y-5 text-sm">
+                                        {data.deliverables.checklist.map((item, idx) => (
+                                            <div key={idx} className="flex justify-between border-b border-white/10 pb-3">
+                                                <span className="text-white/60">{item}</span>
+                                                <span>✓</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </>
+            );
+        }
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
 </body>
 
 </html>

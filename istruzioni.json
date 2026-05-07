@@ -1,0 +1,147 @@
+{
+    "hero": {
+        "subtitle": "Proposta Progetto Web",
+        "title": "Casa Spanu",
+        "description": "Realizzazione di un sito web moderno, elegante e professionale per valorizzare la struttura, aumentare le prenotazioni dirette e migliorare la presenza online."
+    },
+    "intro": {
+        "label": "Obiettivo del progetto",
+        "title": "Creare una presenza online moderna e autorevole",
+        "description1": "Il sito dovrà trasmettere eleganza, natura, comfort e autenticità, aiutando i visitatori a comprendere immediatamente il valore della struttura.",
+        "description2": "L'obiettivo principale sarà trasformare i visitatori in richieste di prenotazione reali, semplificando il contatto diretto con la struttura."
+    },
+    "highlights": [
+        {
+            "icon": "🏖️",
+            "title": "Esperienza",
+            "description": "Valorizzare mare, spiaggia, relax e territorio."
+        },
+        {
+            "icon": "📱",
+            "title": "Mobile First",
+            "description": "Sito ottimizzato per smartphone e prenotazioni rapide."
+        },
+        {
+            "icon": "📈",
+            "title": "Prenotazioni",
+            "description": "Maggiore conversione grazie a contenuti chiari e sistema contatti efficace."
+        }
+    ],
+    "sections": [
+        {
+            "icon": "🎨",
+            "title": "Logo e Identità",
+            "description": "Creazione dell'identità visiva della struttura.",
+            "features": [
+                "Logo ad alta definizione",
+                "Palette colori",
+                "Immagine coordinata",
+                "Versione social"
+            ]
+        },
+        {
+            "icon": "📝",
+            "title": "Contenuti",
+            "description": "Testi professionali e chiari per presentare la struttura.",
+            "features": [
+                "Descrizione alloggi",
+                "Servizi",
+                "Territorio",
+                "Esperienze ed escursioni"
+            ]
+        },
+        {
+            "icon": "📸",
+            "title": "Foto e Video",
+            "description": "Immagini e contenuti visuali ad alta qualità.",
+            "features": [
+                "Foto ad alta definizione",
+                "Video drone",
+                "Vista mare"
+            ]
+        },
+        {
+            "icon": "🏠",
+            "title": "Schede Alloggi",
+            "description": "Pagina dettagliata per ogni alloggio.",
+            "features": [
+                "Posti letto",
+                "Aria condizionata",
+                "Servizi inclusi",
+                "Galleria immagini"
+            ]
+        },
+        {
+            "icon": "💶",
+            "title": "Prezzi e Stagioni",
+            "description": "Gestione chiara delle tariffe.",
+            "features": [
+                "Alta stagione",
+                "Media stagione",
+                "Bassa stagione",
+                "Prezzi settimanali"
+            ]
+        },
+        {
+            "icon": "⭐",
+            "title": "Recensioni e Social",
+            "description": "Maggiore fiducia grazie a feedback e presenza online.",
+            "features": [
+                "Booking",
+                "Tripadvisor",
+                "Instagram",
+                "Google Maps"
+            ]
+        }
+    ],
+    "booking": {
+        "label": "Sistema Prenotazioni",
+        "title": "Pacchetto completo e funzionale",
+        "description": "Un sistema di prenotazioni integrato, semplice da usare e completamente configurabile.",
+        "features": [
+            "Richiesta disponibilità online",
+            "Invio dati via email",
+            "Link WhatsApp per contatto rapido",
+            "Gestione centralizzata richieste"
+        ]
+    },
+    "phases": [
+        {
+            "title": "Design e Template",
+            "description": "Definizione dello stile grafico e struttura del sito."
+        },
+        {
+            "title": "Materiale",
+            "description": "Raccolta testi, foto, logo, prezzi e contenuti."
+        },
+        {
+            "title": "Sviluppo",
+            "description": "Realizzazione tecnica: server, foto, sezioni admin e funzioni per cambiare testi e foto facilmente."
+        },
+        {
+            "title": "Testing",
+            "description": "Controlli mobile, performance e funzionalità."
+        },
+        {
+            "title": "Pubblicazione",
+            "description": "Messa online e configurazione finale."
+        }
+    ],
+    "editability": {
+        "title": "✏️ Facilmente modificabile",
+        "description": "Tutti i testi e le foto sono facilmente cambiabili dall'utente tramite il pannello di controllo. Nessuna dipendenza tecnica."
+    },
+    "deliverables": {
+        "label": "Deliverables",
+        "title": "Cosa riceverai",
+        "description": "Un sito web professionalmente realizzato, veloce, responsive, autorevole e semplice da utilizzare, capace di comunicare immediatamente qualità, relax e professionalità.",
+        "checklist": [
+            "Design moderno",
+            "Versione mobile",
+            "Sistema prenotazioni",
+            "SEO e Google",
+            "Social e recensioni",
+            "Multilingua"
+        ]
+    }
+}
