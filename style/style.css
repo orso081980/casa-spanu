@@ -93,6 +93,27 @@ nav.scrolled .lang-selector .fi { border-color: rgba(0,51,153,0.2) !important; }
     .footer-grid { grid-template-columns: 1fr !important; gap: 2rem; }
     .footer-bottom { flex-direction: column !important; gap: 1rem; text-align: center; }
 }
+
+/* == DATE INPUT STYLING == */
+/* .booking-field {
+    position: relative;
+} */
+
+.date-input {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    width: 100%;
+}
+
+.date-input::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(1);
+}
+
 @media (max-width: 500px) {
     .stats-strip { grid-template-columns: 1fr !important; }
 }
