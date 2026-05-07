@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marina di Conca Verde — Porto Pozzo, Sardegna</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-link {
+            @apply text-sm tracking-widest uppercase text-stone-600 hover:text-teal-700 transition-colors duration-200;
+        }
+
+        .has-dropdown:hover .dropdown {
+            display: block;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sea: { 50: '#f0f9f7', 100: '#d0ede8', 300: '#6bbfb0', 500: '#2d8f7e', 700: '#1a6055', 900: '#0d3530' },
+                        sand: { 50: '#fdf8f2', 100: '#f5ece0', 300: '#d4b896', 500: '#a07850' }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-stone-50 text-stone-800 min-h-screen">
+
+    <!-- ═══════════════════════════════════════════
+     HEADER
+═══════════════════════════════════════════ -->
+    <header class="bg-white border-b border-stone-200 sticky top-0 z-50">
+        <!-- Top bar -->
+        <div class="bg-sea-900 text-white text-xs py-1.5 px-4 md:px-6 flex justify-between items-center">
+            <span class="tracking-wider truncate">Porto Pozzo · Santa Teresa Gallura · Sardegna</span>
+            <div class="flex gap-3 items-center flex-shrink-0 ml-3">
+                <a href="tel:+390789" class="hover:text-sea-300 transition-colors whitespace-nowrap">📞 +39 0789
+                    000000</a>
+                <a href="mailto:info@marinadiconcaverde.it"
+                    class="hidden sm:inline hover:text-sea-300 transition-colors">✉ info@marinadiconcaverde.it</a>
+            </div>
+        </div>
+
+        <!-- Logo + Nav -->
+        <div class="flex items-center justify-between px-6 py-3">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-sea-700 rounded-full flex items-center justify-center">
+                    <span class="text-white text-lg">⚓</span>
+                </div>
+                <div>
+                    <div class="serif text-xl font-semibold text-sea-900 leading-tight">Marina di Conca Verde</div>
+                    <div class="text-xs text-stone-400 tracking-wider uppercase">Porto Pozzo · La Maddalena</div>
+                </div>
+            </a>
+
+            <!-- Nav -->
+            <nav class="hidden lg:flex items-center gap-1">
+                <a href="index.html" class="nav-link px-3 py-1.5 rounded hover:bg-sea-50">Home</a>
+
+                <div class="relative has-dropdown">
+                    <a href="residence.html"
+                        class="nav-link px-3 py-1.5 rounded hover:bg-sea-50 flex items-center gap-1">
+                        Residence <span class="text-stone-400 text-xs">▾</span>
+                    </a>
+                    <div
+                        class="dropdown hidden absolute top-full left-0 bg-white shadow-lg border border-stone-100 rounded-md py-1 w-44 z-50">
+                        <a href="spiaggia.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Spiaggia</a>
+                        <a href="parco.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Parco</a>
+                        <a href="percorsi.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Percorsi</a>
+                    </div>
+                </div>
+
+                <a href="villette.html" class="nav-link px-3 py-1.5 rounded hover:bg-sea-50">Villette</a>
+
+                <div class="relative has-dropdown">
+                    <a href="servizi.html" class="nav-link px-3 py-1.5 rounded hover:bg-sea-50 flex items-center gap-1">
+                        Servizi <span class="text-stone-400 text-xs">▾</span>
+                    </a>
+                    <div
+                        class="dropdown hidden absolute top-full left-0 bg-white shadow-lg border border-stone-100 rounded-md py-1 w-48 z-50">
+                        <a href="reception.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Reception</a>
+                        <a href="ncc.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">NCC /
+                            Transfer</a>
+                        <a href="escursioni.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Escursioni</a>
+                        <a href="diving.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Diving</a>
+                        <a href="mountain-bike.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Mountain
+                            Bike</a>
+                    </div>
+                </div>
+
+                <a href="tariffe.html" class="nav-link px-3 py-1.5 rounded hover:bg-sea-50">Tariffe</a>
+
+                <div class="relative has-dropdown">
+                    <a href="dintorni.html"
+                        class="nav-link px-3 py-1.5 rounded hover:bg-sea-50 flex items-center gap-1">
+                        Dintorni <span class="text-stone-400 text-xs">▾</span>
+                    </a>
+                    <div
+                        class="dropdown hidden absolute top-full left-0 bg-white shadow-lg border border-stone-100 rounded-md py-1 w-48 z-50">
+                        <a href="ristoranti.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Ristoranti</a>
+                        <a href="agriturismo.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Agriturismo</a>
+                        <a href="discoteche.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Discoteche</a>
+                        <a href="mete.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Mete
+                            Preferite</a>
+                        <a href="itinerari.html"
+                            class="block px-4 py-2 text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700">Itinerari</a>
+                    </div>
+                </div>
+
+                <a href="traghetti.html" class="nav-link px-3 py-1.5 rounded hover:bg-sea-50">Traghetti</a>
+                <a href="contatti.html" class="nav-link px-3 py-1.5 rounded hover:bg-sea-50">Contatti</a>
+            </nav>
+
+            <!-- CTA + Hamburger -->
+            <div class="flex items-center gap-3">
+                <a href="tariffe.html"
+                    class="bg-sea-700 hover:bg-sea-900 text-white text-sm font-medium tracking-wider uppercase px-4 py-2 md:px-5 md:py-2.5 rounded transition-colors duration-200">
+                    Prenota
+                </a>
+                <!-- Hamburger (mobile only) -->
+                <button id="hamburger" class="lg:hidden flex flex-col gap-1.5 justify-center p-1"
+                    aria-label="Apri menu">
+                    <span class="block w-6 h-0.5 bg-stone-700"></span>
+                    <span class="block w-6 h-0.5 bg-stone-700"></span>
+                    <span class="block w-6 h-0.5 bg-stone-700"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile nav overlay -->
+    <div id="mob-nav" class="hidden fixed inset-0 z-[200] bg-white flex-col pt-16 px-6 pb-10 overflow-y-auto">
+        <button id="mob-close" class="absolute top-4 right-5 text-3xl text-stone-700 leading-none">×</button>
+        <a href="index.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Home</a>
+        <a href="residence.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Residence</a>
+        <a href="villette.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Villette</a>
+        <a href="servizi.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Servizi</a>
+        <a href="tariffe.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Tariffe</a>
+        <a href="dintorni.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Dintorni</a>
+        <a href="traghetti.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Traghetti</a>
+        <a href="contatti.html"
+            class="mob-l block py-4 border-b border-stone-100 text-lg font-medium text-stone-800 hover:text-sea-700">Contatti</a>
+        <a href="tariffe.html"
+            class="mob-l block mt-6 bg-sea-700 text-white text-center py-4 text-sm font-bold tracking-widest uppercase rounded-lg">Prenota
+            ora</a>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     HERO (compact)
+═══════════════════════════════════════════ -->
+    <div class="relative h-72 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1400&q=80" alt="Porto Pozzo Sardegna"
+            class="w-full h-full object-cover object-center" />
+        <div
+            class="absolute inset-0 bg-gradient-to-r from-sea-900/75 via-sea-900/40 to-transparent flex items-center px-5 md:px-10">
+            <div>
+                <p class="text-sea-300 text-xs tracking-widest uppercase mb-2">Gallura · Sardegna</p>
+                <h1 class="serif text-white text-4xl md:text-5xl font-semibold leading-tight mb-3">
+                    Marina di Conca Verde
+                </h1>
+                <p class="text-white/80 text-base max-w-md leading-relaxed">
+                    Sul fiordo di Porto Pozzo, di fronte all'arcipelago de La Maddalena.
+                </p>
+                <div class="flex flex-wrap gap-3 mt-5">
+                    <a href="residence.html"
+                        class="bg-white text-sea-900 text-sm font-medium px-5 py-2 rounded hover:bg-sea-50 transition-colors">Scopri
+                        il Residence</a>
+                    <a href="offerte.html"
+                        class="border border-white/60 text-white text-sm px-5 py-2 rounded hover:bg-white/10 transition-colors">Offerte
+                        speciali</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     MAIN LAYOUT: Content + Sidebar
+═══════════════════════════════════════════ -->
+    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col lg:flex-row gap-8">
+
+        <!-- ── MAIN CONTENT ── -->
+        <main class="flex-1 min-w-0">
+
+            <!-- Welcome -->
+            <div class="bg-white rounded-xl border border-stone-200 p-7 mb-6">
+                <p class="text-xs tracking-widest uppercase text-sea-600 mb-2">Benvenuti</p>
+                <h2 class="serif text-2xl text-sea-900 mb-4">Un fiordo naturale tra storia e bellezza</h2>
+                <p class="text-stone-600 leading-relaxed text-sm mb-3">
+                    Situata sul fiordo naturale di Porto Pozzo, proprio di fronte l'arcipelago de La Maddalena e l'isola
+                    di Coluccia, la nostra struttura dispone di accoglienti villette in stile <em>"Stazzu"
+                        Gallurese</em> con granito sardo a vista e legno massiccio.
+                </p>
+                <p class="text-stone-600 leading-relaxed text-sm">
+                    Con oltre 40 milioni di anni di storia geologica, questo fiordo è citato nell'Odissea di Omero come
+                    il luogo dove Ulisse si imbatté nei Lestrigoni. Oggi Porto Pozzo è un piacevole borgo di pescatori
+                    con negozi, ristoranti, bar e gelaterie artigianali.
+                </p>
+            </div>
+
+            <!-- Quick links grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                <a href="residence.html"
+                    class="group bg-white rounded-xl border border-stone-200 overflow-hidden hover:border-sea-300 hover:shadow-md transition-all duration-200">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=400&q=80"
+                            alt="Residence"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="p-3">
+                        <div class="font-medium text-sm text-sea-800">Il Residence</div>
+                        <div class="text-xs text-stone-400 mt-0.5">Struttura e servizi</div>
+                    </div>
+                </a>
+                <a href="spiaggia.html"
+                    class="group bg-white rounded-xl border border-stone-200 overflow-hidden hover:border-sea-300 hover:shadow-md transition-all duration-200">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80"
+                            alt="Spiaggia"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="p-3">
+                        <div class="font-medium text-sm text-sea-800">Le Spiagge</div>
+                        <div class="text-xs text-stone-400 mt-0.5">Acque cristalline</div>
+                    </div>
+                </a>
+                <a href="villette.html"
+                    class="group bg-white rounded-xl border border-stone-200 overflow-hidden hover:border-sea-300 hover:shadow-md transition-all duration-200">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80"
+                            alt="Villette"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="p-3">
+                        <div class="font-medium text-sm text-sea-800">Villette</div>
+                        <div class="text-xs text-stone-400 mt-0.5">In stile Stazzu Gallurese</div>
+                    </div>
+                </a>
+                <a href="dintorni.html"
+                    class="group bg-white rounded-xl border border-stone-200 overflow-hidden hover:border-sea-300 hover:shadow-md transition-all duration-200">
+                    <div class="h-28 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&q=80"
+                            alt="Dintorni"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+                    </div>
+                    <div class="p-3">
+                        <div class="font-medium text-sm text-sea-800">Nei Dintorni</div>
+                        <div class="text-xs text-stone-400 mt-0.5">Escursioni e mete</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Highlights row -->
+            <div class="bg-sea-900 rounded-xl p-6 text-white mb-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div>
+                        <div class="serif text-3xl font-semibold text-sea-300">40M+</div>
+                        <div class="text-xs text-white/60 mt-1 uppercase tracking-wider">Anni storia geologica</div>
+                    </div>
+                    <div>
+                        <div class="serif text-3xl font-semibold text-sea-300">La Maddalena</div>
+                        <div class="text-xs text-white/60 mt-1 uppercase tracking-wider">Arcipelago di fronte</div>
+                    </div>
+                    <div>
+                        <div class="serif text-3xl font-semibold text-sea-300">Porto Pozzo</div>
+                        <div class="text-xs text-white/60 mt-1 uppercase tracking-wider">Fiordo naturale</div>
+                    </div>
+                    <div>
+                        <div class="serif text-3xl font-semibold text-sea-300">★ 9/10</div>
+                        <div class="text-xs text-white/60 mt-1 uppercase tracking-wider">TripAdvisor</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page links (bottom nav) -->
+            <div class="bg-white rounded-xl border border-stone-200 p-5">
+                <p class="text-xs font-medium uppercase tracking-widest text-stone-400 mb-4">Esplora il sito</p>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
+                    <a href="residence.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🏡</span> Residence
+                    </a>
+                    <a href="spiaggia.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🏖</span> Spiaggia
+                    </a>
+                    <a href="parco.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🌿</span> Parco
+                    </a>
+                    <a href="villette.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🏠</span> Villette
+                    </a>
+                    <a href="tariffe.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">💶</span> Tariffe
+                    </a>
+                    <a href="servizi.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">⚙️</span> Servizi
+                    </a>
+                    <a href="escursioni.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">⛵</span> Escursioni
+                    </a>
+                    <a href="diving.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🤿</span> Diving
+                    </a>
+                    <a href="traghetti.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🚢</span> Traghetti
+                    </a>
+                    <a href="mountain-bike.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🚵</span> Mountain Bike
+                    </a>
+                    <a href="dintorni.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">🗺</span> Dintorni
+                    </a>
+                    <a href="contatti.html"
+                        class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm text-stone-600 hover:bg-sea-50 hover:text-sea-700 transition-colors">
+                        <span class="text-sea-500">✉</span> Contatti
+                    </a>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- ── SIDEBAR ── -->
+        <aside class="w-full lg:w-80 flex-shrink-0 flex flex-col gap-5">
+
+            <!-- Booking widget -->
+            <div class="bg-sea-800 text-white rounded-xl overflow-hidden">
+                <div class="bg-sea-900 px-5 py-3 flex items-center gap-2">
+                    <span>📅</span>
+                    <span class="font-medium text-sm tracking-wide uppercase">Prenota il tuo soggiorno</span>
+                </div>
+                <div class="p-5 flex flex-col gap-4">
+                    <div>
+                        <label class="text-xs text-sea-300 uppercase tracking-wider block mb-1.5">Arrivo</label>
+                        <input type="date"
+                            class="w-full bg-sea-700/60 text-white text-sm border border-sea-600 rounded-lg px-3 py-2.5 outline-none focus:border-sea-300 transition-colors" />
+                    </div>
+                    <div>
+                        <label class="text-xs text-sea-300 uppercase tracking-wider block mb-1.5">Partenza</label>
+                        <input type="date"
+                            class="w-full bg-sea-700/60 text-white text-sm border border-sea-600 rounded-lg px-3 py-2.5 outline-none focus:border-sea-300 transition-colors" />
+                    </div>
+                    <div>
+                        <label class="text-xs text-sea-300 uppercase tracking-wider block mb-1.5">Sistemazione</label>
+                        <select
+                            class="w-full bg-sea-700/60 text-white text-sm border border-sea-600 rounded-lg px-3 py-2.5 outline-none focus:border-sea-300 transition-colors">
+                            <option class="bg-sea-900">Qualsiasi</option>
+                            <option class="bg-sea-900">Villetta Standard</option>
+                            <option class="bg-sea-900">Villetta Vista Mare</option>
+                            <option class="bg-sea-900">Chalet</option>
+                        </select>
+                    </div>
+                    <button
+                        class="w-full bg-white text-sea-900 font-semibold text-sm py-3 rounded-lg hover:bg-sea-50 transition-colors tracking-wide uppercase">
+                        Verifica disponibilità
+                    </button>
+                </div>
+            </div>
+
+            <!-- Prenota traghetti -->
+            <div class="bg-white rounded-xl border border-stone-200 p-5">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-xl">🚢</span>
+                    <div>
+                        <div class="font-semibold text-sm text-stone-800">Traghetti per la Sardegna</div>
+                        <div class="text-xs text-stone-400">Prenota il tuo viaggio</div>
+                    </div>
+                </div>
+                <a href="traghetti.html"
+                    class="block w-full text-center bg-sea-700 hover:bg-sea-900 text-white text-sm font-medium py-2.5 rounded-lg transition-colors">
+                    Prenota traghetto
+                </a>
+            </div>
+
+            <!-- Map -->
+            <div class="bg-white rounded-xl border border-stone-200 overflow-hidden">
+                <div class="bg-stone-100 border-b border-stone-200 px-4 py-2.5 flex items-center gap-2">
+                    <span>📍</span>
+                    <span class="text-sm font-medium text-stone-700">Dove siamo</span>
+                </div>
+                <div class="relative h-48">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.0!2d9.0834!3d41.2419!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDHCsDE0JzMwLjgiTiA5wrAwNScwMC4yIkU!5e0!3m2!1sit!2sit!4v1700000000"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" class="w-full h-full">
+                    </iframe>
+                </div>
+                <div class="px-4 py-3 border-t border-stone-100">
+                    <p class="text-xs text-stone-500 leading-relaxed">Porto Pozzo · Santa Teresa Gallura (SS)</p>
+                    <a href="https://maps.google.com/?q=Porto+Pozzo+Santa+Teresa+Gallura" target="_blank"
+                        class="text-xs text-sea-600 hover:text-sea-800 font-medium mt-1 inline-block transition-colors">
+                        Apri in Google Maps →
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social -->
+            <div class="bg-white rounded-xl border border-stone-200 p-5">
+                <p class="text-xs font-medium uppercase tracking-widest text-stone-400 mb-3">Seguici sui social</p>
+                <div class="flex flex-col gap-2">
+                    <a href="https://www.facebook.com/pages/Marina-di-Conca-Verde/188692274547891" target="_blank"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#1877F2]/10 hover:bg-[#1877F2]/20 transition-colors group">
+                        <svg class="w-5 h-5 text-[#1877F2]" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                        <span class="text-sm text-stone-700 group-hover:text-stone-900 font-medium">Facebook</span>
+                    </a>
+                    <a href="https://twitter.com/MarinConcaVerde" target="_blank"
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-stone-100 hover:bg-stone-200 transition-colors group">
+                        <svg class="w-5 h-5 text-stone-700" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                        <span class="text-sm text-stone-700 group-hover:text-stone-900 font-medium">Twitter / X</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TripAdvisor badge -->
+            <div class="bg-white rounded-xl border border-stone-200 p-4 flex items-center gap-3">
+                <div class="w-10 h-10 bg-[#00aa6c] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span class="text-white text-lg">🦉</span>
+                </div>
+                <div>
+                    <div class="text-xs font-semibold text-stone-700">Recommended on TripAdvisor</div>
+                    <div class="flex gap-0.5 mt-0.5">
+                        <span class="text-[#00aa6c] text-sm">●●●●○</span>
+                    </div>
+                    <a href="https://www.tripadvisor.co.uk/" target="_blank"
+                        class="text-xs text-[#00aa6c] hover:underline">Leggi le recensioni →</a>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+
+    <!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+    <footer class="bg-sea-900 text-white mt-6">
+        <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <div class="serif text-xl mb-2">Marina di Conca Verde</div>
+                <p class="text-sea-300 text-sm leading-relaxed">Porto Pozzo · Santa Teresa Gallura<br>07028 Sassari (SS)
+                    · Sardegna</p>
+                <p class="text-sea-300 text-sm mt-3">Marina di Conca Verde srl<br>P.I. 00334540903<br>Sede: Zona Ind.
+                    Sett. 1 – 07026 Olbia (OT)</p>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-widest text-sea-400 mb-3">Link rapidi</p>
+                <div class="grid grid-cols-2 gap-x-4 gap-y-1.5">
+                    <a href="residence.html"
+                        class="text-sm text-sea-300 hover:text-white transition-colors">Residence</a>
+                    <a href="villette.html" class="text-sm text-sea-300 hover:text-white transition-colors">Villette</a>
+                    <a href="spiaggia.html" class="text-sm text-sea-300 hover:text-white transition-colors">Spiaggia</a>
+                    <a href="servizi.html" class="text-sm text-sea-300 hover:text-white transition-colors">Servizi</a>
+                    <a href="tariffe.html" class="text-sm text-sea-300 hover:text-white transition-colors">Tariffe</a>
+                    <a href="traghetti.html"
+                        class="text-sm text-sea-300 hover:text-white transition-colors">Traghetti</a>
+                    <a href="escursioni.html"
+                        class="text-sm text-sea-300 hover:text-white transition-colors">Escursioni</a>
+                    <a href="contatti.html" class="text-sm text-sea-300 hover:text-white transition-colors">Contatti</a>
+                </div>
+            </div>
+            <div>
+                <p class="text-xs uppercase tracking-widest text-sea-400 mb-3">Contatti</p>
+                <div class="flex flex-col gap-2 text-sm text-sea-300">
+                    <span>📞 +39 0789 000000</span>
+                    <a href="mailto:info@marinadiconcaverde.it" class="hover:text-white transition-colors">✉
+                        info@marinadiconcaverde.it</a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-sea-700 px-4 py-4">
+            <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3 text-xs text-sea-500">
+                <span>© 2025 Marina di Conca Verde srl — Tutti i diritti riservati</span>
+                <div class="flex gap-4">
+                    <a href="contatti.html" class="hover:text-sea-300 transition-colors">Contatti</a>
+                    <a href="#" class="hover:text-sea-300 transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-sea-300 transition-colors">Note Legali</a>
+                    <a href="#" class="hover:text-sea-300 transition-colors">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav
+        const hamburger = document.getElementById('hamburger');
+        const mobNav = document.getElementById('mob-nav');
+        const mobClose = document.getElementById('mob-close');
+
+        hamburger.addEventListener('click', () => mobNav.classList.replace('hidden', 'flex'));
+        mobClose.addEventListener('click', () => mobNav.classList.replace('flex', 'hidden'));
+        document.querySelectorAll('.mob-l').forEach(a =>
+            a.addEventListener('click', () => mobNav.classList.replace('flex', 'hidden'))
+        );
+    </script>
+</body>
+
+</html>

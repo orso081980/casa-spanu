@@ -1,0 +1,10 @@
+<svg width="400" height="150" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="150" fill="none"/>
+  
+  <path d="M40 80 Q 60 40, 80 80 T 120 80" stroke="#0077b6" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M40 95 Q 60 55, 80 95 T 120 95" stroke="#00b4d8" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M30 105 C 50 120, 110 120, 130 105" stroke="#2d6a4f" stroke-width="8" fill="none" stroke-linecap="round"/>
+  
+  <text x="140" y="85" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#023e8a">MARINA DI</text>
+  <text x="140" y="115" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#2d6a4f">CONCA VERDE</text>
+</svg>

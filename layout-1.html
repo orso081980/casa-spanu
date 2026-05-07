@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Casa Spanu — Natura, Mare, Libertà</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css">
+</head>
+
+<body>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#"
+            class="text-2xl tracking-widest uppercase text-[#003399] no-underline hover:text-[#f8e6a0] transition-colors">Alloggi</a>
+        <a href="#"
+            class="text-2xl tracking-widest uppercase text-[#003399] no-underline hover:text-[#f8e6a0] transition-colors">Spiaggia</a>
+        <a href="#"
+            class="text-2xl tracking-widest uppercase text-[#003399] no-underline hover:text-[#f8e6a0] transition-colors">Servizi</a>
+        <a href="#"
+            class="text-2xl tracking-widest uppercase text-[#003399] no-underline hover:text-[#f8e6a0] transition-colors">Territorio</a>
+        <a href="#"
+            class="text-2xl tracking-widest uppercase text-[#003399] no-underline hover:text-[#f8e6a0] transition-colors">Contatti</a>
+        <a href="#"
+            class="inline-block bg-[#f8e6a0] text-[#003399] text-xs tracking-widest uppercase px-6 py-3 no-underline mt-2 font-semibold">Prenota
+            Ora</a>
+        <div class="absolute bottom-8 flex flex-col items-center gap-5">
+            <div class="flex gap-3">
+                <span class="fi fi-it text-2xl cursor-pointer hover:opacity-70 transition-opacity"
+                    title="Italiano"></span>
+                <span class="fi fi-gb text-2xl cursor-pointer hover:opacity-70 transition-opacity"
+                    title="English"></span>
+                <span class="fi fi-de text-2xl cursor-pointer hover:opacity-70 transition-opacity"
+                    title="Deutsch"></span>
+            </div>
+            <div class="flex gap-4">
+                <a href="#" class="text-[#003399] text-xl hover:text-[#f8e6a0] transition-colors"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-[#003399] text-xl hover:text-[#f8e6a0] transition-colors"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="text-[#003399] text-xl hover:text-[#f8e6a0] transition-colors"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-[#003399] text-xl hover:text-[#f8e6a0] transition-colors"><i
+                        class="fab fa-tripadvisor"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 px-12 py-6 flex items-center justify-between transition-all duration-300">
+        <div class="nav-logo text-white font-semibold tracking-wide transition-colors duration-300">Casa Spanu
+        </div>
+        <div class="nav-links flex items-center">
+            <a href="#"
+                class="text-xs tracking-widest uppercase text-white/85 no-underline ml-10 hover:text-[#f8e6a0] transition-colors">Alloggi</a>
+            <a href="#"
+                class="text-xs tracking-widest uppercase text-white/85 no-underline ml-10 hover:text-[#f8e6a0] transition-colors">Spiaggia</a>
+            <a href="#"
+                class="text-xs tracking-widest uppercase text-white/85 no-underline ml-10 hover:text-[#f8e6a0] transition-colors">Servizi</a>
+            <a href="#"
+                class="text-xs tracking-widest uppercase text-white/85 no-underline ml-10 hover:text-[#f8e6a0] transition-colors">Territorio</a>
+            <a href="#"
+                class="text-xs tracking-widest uppercase text-white/85 no-underline ml-10 hover:text-[#f8e6a0] transition-colors">Contatti</a>
+            <a href="#"
+                class="nav-cta text-xs tracking-widest uppercase no-underline ml-10 px-5 py-2 bg-white text-[#003399] rounded-sm transition-all">Prenota
+                Ora</a>
+            <div class="lang-selector ml-5">
+                <span class="fi fi-it text-lg cursor-pointer"></span>
+                <div class="lang-dropdown">
+                    <span class="fi fi-gb text-lg cursor-pointer" title="English"></span>
+                    <span class="fi fi-de text-lg cursor-pointer" title="Deutsch"></span>
+                </div>
+            </div>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content relative z-10 px-16 pb-20 max-w-4xl">
+            <div class="hero-tag relative text-xs tracking-widest uppercase text-white/70 mb-6 pl-10">Santa Margherita
+                di Pula</div>
+            <h1 class="font-light text-white leading-none tracking-tight mb-6" style="font-size:clamp(3.5rem,8vw,7rem)">
+                Casa Spanu</h1>
+            <p class="text-white/90 text-base leading-relaxed mb-10 max-w-md font-light">La spiaggia di Perla Marina è
+                caratterizzata da sabbia molto fine di colore giallo, con vegetazione retrostante di macchia
+                mediterranea. Il mare è di colore smeraldo, con fondale sabbioso e profondità che scende gradualmente,
+                ideale per famiglie.</p>
+            <div>
+                <a href="#"
+                    class="inline-flex items-center gap-3 bg-[#f8e6a0] text-[#003399] px-8 py-4 text-xs tracking-widest uppercase no-underline hover:bg-[#f8e6a0] transition-colors font-semibold">Scopri
+                    la location <span>→</span></a>
+                <a href="#"
+                    class="inline-flex items-center border border-white/60 text-white px-7 py-4 text-xs tracking-widest uppercase no-underline ml-4 hover:bg-white/10 transition-colors">Scopri
+                    la location</a>
+            </div>
+        </div>
+        <div class="hero-scroll absolute bottom-10 right-12 flex items-center gap-3 text-white/60 text-xs tracking-widest uppercase"
+            style="writing-mode:vertical-rl">
+            <div class="scroll-line"></div>
+            Scorri
+        </div>
+    </section>
+
+    <!-- STATS STRIP -->
+    <div class="stats-strip grid grid-cols-4 bg-[#003399]">
+        <div class="py-10 px-8 text-center border-r border-white/10">
+            <div class="serif text-5xl font-light text-[#FFDF46] leading-none">4</div>
+            <div class="text-xs tracking-widest uppercase text-white/55 mt-2">Alloggi disponibili</div>
+        </div>
+        <div class="py-10 px-8 text-center border-r border-white/10">
+            <div class="serif text-5xl font-light text-[#FFDF46] leading-none">2 tipologie</div>
+            <div class="text-xs tracking-widest uppercase text-white/55 mt-2">Bilocale/Trilocale</div>
+        </div>
+        <div class="py-10 px-8 text-center border-r border-white/10">
+            <div class="serif text-5xl font-light text-[#FFDF46] leading-none">40M</div>
+            <div class="text-xs tracking-widest uppercase text-white/55 mt-2">Anni di storia geologica</div>
+        </div>
+        <div class="py-10 px-8 text-center">
+            <div class="serif text-5xl font-light text-[#FFDF46] leading-none">★ 9.2</div>
+            <div class="text-xs tracking-widest uppercase text-white/55 mt-2">Valutazione ospiti</div>
+        </div>
+    </div>
+
+    <!-- INTRO SECTION -->
+    <section>
+        <div class="section-intro grid grid-cols-2 gap-24 items-center max-w-7xl mx-auto px-16 py-32">
+            <div class="fade-in">
+                <div class="text-xs tracking-widest uppercase text-[#5591C8] font-semibold mb-5">Pula – Sardegna</div>
+                <h2 class="serif font-light text-[#003399] leading-tight" style="font-size:clamp(2.5rem,4vw,3.8rem)">
+                    Benvenuti a <em class="italic text-[#f8e6a0]">Casa Spanu</em></h2>
+                <div class="divider-leaf"></div>
+                <p class="text-base leading-loose text-[#333333] font-light mb-6">Situata a Santa Margherita di Pula,
+                    nella costa sud della Sardegna, Casa Spanu offre accoglienti alloggi in stile mediterraneo con vista
+                    sul mare e spiaggia privata.</p>
+                <p class="text-base leading-loose text-[#333333] font-light mb-6">La spiaggia di Perla Marina è una
+                    delle spiagge più belle del territorio di Pula, con sabbia molto fine e mare smeraldo. Il fondale
+                    sabbioso permette una profondità che scende gradualmente, rendendola perfetta per famiglie con
+                    bambini e per rilassarsi in un ambiente naturale.</p>
+                <a href="#"
+                    class="text-xs tracking-widest uppercase no-underline border-b border-[#003399] pb-0.5 text-[#003399]">La
+                    nostra storia →</a>
+            </div>
+            <div class="photo-grid fade-in" style="transition-delay:0.2s">
+                <img class="span-2" src="/images/pexels-alessio-saltarin-3596073-35854928.jpg" alt="Vista sul mare" />
+                <img class="top-right" src="/images/pexels-edvinas-jakunskas-31556731.jpg" alt="Spiaggia" />
+                <img class="bot-right" src="/images/pexels-han-798356342-33761573.jpg" alt="Mare" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ALLOGGI -->
+    <section class="bg-[#F0F8FF] px-16 py-32">
+        <div class="max-w-7xl mx-auto mb-16 flex justify-between items-end fade-in">
+            <h2 class="serif font-light text-[#003399]" style="font-size:clamp(2rem,3.5vw,3rem)">I nostri <span
+                    class="italic text-[#f8e6a0]">alloggi</span></h2>
+            <a href="#"
+                class="text-xs tracking-widest uppercase text-[#f8e6a0] no-underline border-b border-[#f8e6a0] font-semibold pb-0.5">Vedi
+                tutti →</a>
+        </div>
+        <div class="cards-grid max-w-7xl mx-auto grid grid-cols-3 gap-6">
+
+            <div
+                class="card bg-white overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 fade-in">
+                <div class="overflow-hidden"><img class="card-img w-full h-60 object-cover block"
+                        src="/images/pexels-andreas-geissler-320379030-31716947.jpg" alt="Piazzole" /></div>
+                <div class="p-7">
+                    <div class="text-xs tracking-widest uppercase text-[#FFDF46] mb-2">Outdoor</div>
+                    <div class="serif text-2xl text-[#003399] mb-2">Piazzole in pineta</div>
+                    <div class="text-sm text-[#777] leading-relaxed mb-5">Respira l'aria fresca sotto le pinete
+                        centenarie. Spazio per tende, roulotte e camper con ogni comfort.</div>
+                    <div class="flex gap-6 text-xs text-[#888] mb-0 flex-wrap">
+                        <span>🌲 Ombra naturale</span><span>🔌 Allaccio elettrico</span><span>🚿 Servizi inclusi</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-5 pt-5 border-t border-[#eee]">
+                        <div>
+                            <div class="text-xs text-[#aaa] tracking-widest uppercase">Da</div>
+                            <div class="serif text-2xl text-[#003399]">€18 <span class="text-xs text-[#aaa] font-sans">/
+                                    notte</span></div>
+                        </div>
+                        <a href="#"
+                            class="bg-[#f8e6a0] text-[#003399] text-xs tracking-widest uppercase no-underline px-5 py-2.5 hover:bg-[#f8e6a0] font-semibold transition-colors">Prenota</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-white overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 fade-in"
+                style="transition-delay:0.1s">
+                <div class="overflow-hidden"><img class="card-img w-full h-60 object-cover block"
+                        src="/images/pexels-bovistas-2157537713-34951696.jpg" alt="Bungalow" /></div>
+                <div class="p-7">
+                    <div class="text-xs tracking-widest uppercase text-[#FFDF46] mb-2">Confort</div>
+                    <div class="serif text-2xl text-[#003399] mb-2">Bungalow lago</div>
+                    <div class="text-sm text-[#777] leading-relaxed mb-5">Piccole case nel verde a pochi passi dal mare.
+                        Perfetti per famiglie e coppie che cercano intimità senza rinunciare ai servizi.</div>
+                    <div class="flex gap-6 text-xs text-[#888] flex-wrap">
+                        <span>🛏 2-4 posti</span><span>❄️ Aria condizionata</span><span>🏖 Vista mare</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-5 pt-5 border-t border-[#eee]">
+                        <div>
+                            <div class="text-xs text-[#aaa] tracking-widest uppercase">Da</div>
+                            <div class="serif text-2xl text-[#003399]">€65 <span class="text-xs text-[#aaa] font-sans">/
+                                    notte</span></div>
+                        </div>
+                        <a href="#"
+                            class="bg-[#f8e6a0] text-[#003399] text-xs tracking-widest uppercase no-underline px-5 py-2.5 hover:bg-[#f8e6a0] font-semibold transition-colors">Prenota</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card bg-white overflow-hidden cursor-pointer hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 fade-in"
+                style="transition-delay:0.2s">
+                <div class="overflow-hidden"><img class="card-img w-full h-60 object-cover block"
+                        src="/images/pexels-broodingasf-7587923.jpg" alt="Chalet" /></div>
+                <div class="p-7">
+                    <div class="text-xs tracking-widest uppercase text-[#FFDF46] mb-2">Premium</div>
+                    <div class="serif text-2xl text-[#003399] mb-2">Chalet vista lago</div>
+                    <div class="text-sm text-[#777] leading-relaxed mb-5">Il massimo del comfort immerso nella natura.
+                        Veranda privata con panorama mozzafiato direttamente sul mare.</div>
+                    <div class="flex gap-6 text-xs text-[#888] flex-wrap">
+                        <span>🛏 4-6 posti</span><span>🌅 Terrazza privata</span><span>🍳 Cucina attrezzata</span>
+                    </div>
+                    <div class="flex justify-between items-center mt-5 pt-5 border-t border-[#eee]">
+                        <div>
+                            <div class="text-xs text-[#aaa] tracking-widest uppercase">Da</div>
+                            <div class="serif text-2xl text-[#003399]">€130 <span
+                                    class="text-xs text-[#aaa] font-sans">/ notte</span></div>
+                        </div>
+                        <a href="#"
+                            class="bg-[#f8e6a0] text-[#003399] text-xs tracking-widest uppercase no-underline px-5 py-2.5 hover:bg-[#f8e6a0] font-semibold transition-colors">Prenota</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVIZI -->
+    <section class="max-w-7xl mx-auto px-16 py-32">
+        <div class="text-center mb-0 fade-in">
+            <div class="text-xs tracking-widest uppercase text-[#FFDF46] mb-4 inline-block">Servizi</div>
+            <h2 class="serif font-light text-[#003399]" style="font-size:clamp(2rem,3.5vw,3rem)">Tutto per il tuo <em
+                    class="italic text-[#f8e6a0]">benessere</em></h2>
+        </div>
+        <div class="servizi-grid grid grid-cols-3 mt-12 border-t border-[#e5e0d8]">
+            <div class="p-12 border-r border-[#e5e0d8] hover:bg-[#C6E7FF] transition-colors fade-in">
+                <svg class="w-10 h-10 mb-6 text-[#003399]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M3 15a4 4 0 004 4h9a5 5 0 10-4.9-6H7a4 4 0 00-4 4z M12 3v1m0 16v1M4.2 4.2l.7.7m14.1 14.1l.7.7M1 12h1m20 0h1M4.2 19.8l.7-.7M19.1 4.9l.7-.7" />
+                </svg>
+                <div class="serif text-xl text-[#003399] mb-2">Reception</div>
+                <div class="text-sm text-[#777] leading-relaxed">Siamo a disposizione per le attività di check-in,
+                    assistenza durante tutta la permanenza e consigli per goderti al massimo la vacanza. <span
+                        id="reception-more" style="display:none">Non esitare a contattarci telefonicamente anche per
+                        consigli su dove andare e come programmare le giornate. Attraverso di noi puoi prenotare Taxi,
+                        servizi transfer, escursioni, noleggio auto e mountain bike.</span> <a href="#"
+                        onclick="document.getElementById('reception-more').style.display='inline';this.style.display='none';return false;"
+                        class="text-[#003399] underline cursor-pointer">Read more...</a></div>
+            </div>
+            <div class="p-12 border-r border-[#e5e0d8] hover:bg-[#C6E7FF] transition-colors fade-in"
+                style="transition-delay:0.1s">
+                <svg class="w-10 h-10 mb-6 text-[#003399]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div class="serif text-xl text-[#003399] mb-2">Ncc Transfer</div>
+                <div class="text-sm text-[#777] leading-relaxed">A Pula abbiamo la fortuna di avere una
+                    brillante società a conduzione familiare per il noleggio di auto e servizio transfer. <span
+                        id="ncc-more" style="display:none">Che sia il noleggio di una macchina economica per un giorno,
+                        il servizio taxi per Porto Cervo o transfer da e per l'aeroporto, sapremo trovare la migliore
+                        tariffa.</span> <a href="#"
+                        onclick="document.getElementById('ncc-more').style.display='inline';this.style.display='none';return false;"
+                        class="text-[#003399] underline cursor-pointer">Read more...</a></div>
+            </div>
+            <div class="p-12 hover:bg-[#C6E7FF] transition-colors fade-in" style="transition-delay:0.2s">
+                <svg class="w-10 h-10 mb-6 text-[#003399]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                <div class="serif text-xl text-[#003399] mb-2">Escursioni</div>
+                <div class="text-sm text-[#777] leading-relaxed">Qualsiasi sia la tua passione oppure la curiosità di
+                    provare una nuova esperienza abbiamo a disposizione un fantastico ventaglio di attività. <span
+                        id="escursioni-more" style="display:none">Escursioni a cavallo, in mountain bike, in quad, in
+                        barca a vela o una gita alle isole. Scuole di wind surf e kite surf. Una battuta di pesca con
+                        pranzo a bordo.</span> <a href="#"
+                        onclick="document.getElementById('escursioni-more').style.display='inline';this.style.display='none';return false;"
+                        class="text-[#003399] underline cursor-pointer">Read more...</a></div>
+            </div>
+        </div>
+        <div class="servizi-grid second-row grid grid-cols-2 border-t border-[#e5e0d8]">
+            <div class="p-12 border-r border-[#e5e0d8] hover:bg-[#C6E7FF] transition-colors fade-in"
+                style="transition-delay:0.3s">
+                <svg class="w-10 h-10 mb-6 text-[#003399]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <div class="serif text-xl text-[#003399] mb-2">Diving</div>
+                <div class="text-sm text-[#777] leading-relaxed">Tra Pula e Cagliari sono molteplici le
+                    scuole e i centri diving autorizzati per portarvi ad esplorare i fondali più belli. <span
+                        id="diving-more" style="display:none">Che sia un'uscita di mezza giornata o un corso intero per
+                        prendere il brevetto o migliorare le proprie conoscenze.</span> <a href="#"
+                        onclick="document.getElementById('diving-more').style.display='inline';this.style.display='none';return false;"
+                        class="text-[#003399] underline cursor-pointer">Read more...</a></div>
+            </div>
+            <div class="p-12 hover:bg-[#C6E7FF] transition-colors fade-in" style="transition-delay:0.4s">
+                <svg class="w-10 h-10 mb-6 text-[#003399]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+                <div class="serif text-xl text-[#003399] mb-2">Mountain Bike</div>
+                <div class="text-sm text-[#777] leading-relaxed">La bicicletta è senz'altro uno dei mezzi migliori per
+                    prendere contatto con la natura ed esplorare le zone più incontaminate e belle della Sardegna
+                    meridionale. Chiedi
+                    al ricevimento per informazioni su come ottenere le mountain bike e che percorsi effettuare.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEACH FULL BLEED -->
+    <section class="beach-section flex items-center px-16 py-20 min-h-96">
+        <div class="max-w-xl fade-in">
+            <div class="text-xs tracking-widest uppercase text-[#C6E7FF] mb-4">La spiaggia</div>
+            <h2 class="serif font-light text-white leading-tight mb-5" style="font-size:clamp(2.5rem,5vw,4.5rem)">La
+                spiaggia di Perla Marina</h2>
+            <p class="text-white/75 text-base leading-relaxed mb-8 font-light">è caratterizzata dalla presenza di sabbia
+                molto fine di colore giallo, con vegetazione retrostante di macchia mediterranea. Il mare è di colore
+                smeraldo, con fondale sabbioso e profondità che scende gradualmente, ideale per famiglie con bambini.
+            </p>
+            <a href="#"
+                class="inline-flex items-center gap-3 bg-[#003399] text-white px-8 py-4 text-xs tracking-widest uppercase no-underline hover:bg-[#003399] transition-colors">Scopri
+                la spiaggia</a>
+        </div>
+    </section>
+
+    <!-- PRENOTAZIONE BAR -->
+    <section class="bg-[#003399] px-16 py-24">
+        <div class="max-w-3xl mx-auto text-center fade-in">
+            <h2 class="serif font-light text-white mb-3" style="font-size:clamp(2rem,4vw,3.5rem)">Prenota la tua <em
+                    class="italic text-[#FFDF46]">vacanza ideale</em></h2>
+            <p class="text-white/55 mb-12 text-base">Disponibilità in tempo reale, conferma immediata</p>
+            <div class="booking-bar grid bg-white/5 border border-white/10"
+                style="grid-template-columns:1fr 1fr 1fr auto">
+                <div class="booking-field px-7 py-5 border-r border-white/10 text-left">
+                    <label class="block text-xs tracking-widest uppercase text-white/40 mb-1">Arrivo</label>
+                    <input type="date" />
+                </div>
+                <div class="booking-field px-7 py-5 border-r border-white/10 text-left">
+                    <label class="block text-xs tracking-widest uppercase text-white/40 mb-1">Partenza</label>
+                    <input type="date" />
+                </div>
+                <div class="booking-field px-7 py-5 border-r border-white/10 text-left">
+                    <label class="block text-xs tracking-widest uppercase text-white/40 mb-1">Sistemazione</label>
+                    <select>
+                        <option>Qualsiasi tipo</option>
+                        <option>Piazzola tenda</option>
+                        <option>Piazzola camper</option>
+                        <option>Bungalow</option>
+                        <option>Chalet</option>
+                    </select>
+                </div>
+                <button
+                    class="booking-btn bg-[#003399] text-white border-0 px-10 text-xs tracking-widest uppercase cursor-pointer hover:bg-[#003399] transition-colors">Cerca
+                    →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECENSIONI -->
+    <section class="max-w-7xl mx-auto px-16 py-32">
+        <div class="fade-in mb-16">
+            <div class="text-xs tracking-widest uppercase text-[#FFDF46] mb-4">Cosa dicono i nostri ospiti</div>
+            <h2 class="serif font-light text-[#003399]" style="font-size:clamp(2rem,3.5vw,3rem)"><em
+                    class="italic text-[#f8e6a0]">Esperienze</em> che parlano</h2>
+        </div>
+        <div class="reviews-grid grid grid-cols-3 gap-8">
+            <div class="relative p-10 border border-[#e5e0d8] fade-in">
+                <div class="absolute top-6 right-8 serif text-8xl leading-none text-[#C6E7FF] italic">"</div>
+                <div class="text-[#FFDF46] text-sm mb-5">★★★★★</div>
+                <div class="serif italic text-lg text-[#003399] leading-relaxed mb-6">Un posto meraviglioso. La spiaggia
+                    privata è curatissima, il personale gentilissimo. Torneremo sicuramente l'anno prossimo!</div>
+                <div class="text-xs text-[#aaa]"><strong class="text-[#003399] font-sans">Martina B.</strong> — Milano,
+                    luglio 2024</div>
+            </div>
+            <div class="relative p-10 border border-[#e5e0d8] fade-in" style="transition-delay:0.1s">
+                <div class="absolute top-6 right-8 serif text-8xl leading-none text-[#C6E7FF] italic">"</div>
+                <div class="text-[#FFDF46] text-sm mb-5">★★★★★</div>
+                <div class="serif italic text-lg text-[#003399] leading-relaxed mb-6">Il bungalow era pulitissimo e
+                    confortevole. I bambini si sono divertiti tantissimo con l'animazione e gli sport acquatici.</div>
+                <div class="text-xs text-[#aaa]"><strong class="text-[#003399] font-sans">Famiglia Rossi</strong> —
+                    Torino, agosto 2024</div>
+            </div>
+            <div class="relative p-10 border border-[#e5e0d8] fade-in" style="transition-delay:0.2s">
+                <div class="absolute top-6 right-8 serif text-8xl leading-none text-[#C6E7FF] italic">"</div>
+                <div class="text-[#FFDF46] text-sm mb-5">★★★★☆</div>
+                <div class="serif italic text-lg text-[#003399] leading-relaxed mb-6">Posizione fantastica immersa nel
+                    verde. Il lago è accessibile in pochi passi, atmosfera rilassante e autentica.</div>
+                <div class="text-xs text-[#aaa]"><strong class="text-[#003399] font-sans">Luca e Sara</strong> —
+                    Bologna, settembre 2024</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATTI + MAPPA -->
+    <section class="location-section" style="display:grid;grid-template-columns:1fr 1.5fr;height:100vh">
+        <div class="bg-[#003399] flex flex-col justify-center px-20 py-20 fade-in">
+            <div class="text-xs tracking-widest uppercase text-white/40 mb-6">Contatti</div>
+            <h2 class="serif font-light text-white mb-8" style="font-size:2.5rem">Info e Prenotazioni</h2>
+            <p class="text-white font-semibold text-sm mt-2">Email</p>
+            <p class="text-white/65 text-sm">mcv@marinadiconcaverde.it</p>
+            <p class="text-white font-semibold text-sm mt-4">Telefono</p>
+            <p class="text-white/65 text-sm">+39.348.3509574</p>
+            <p class="text-white font-semibold text-sm mt-4">Reception (su appuntamento)</p>
+            <p class="text-white/65 text-sm">Via Perla Marina, Loc. Santa Margherita - Pula (CA).</p>
+            <p class="text-white/65 text-sm">Telefono: +39.348.3509574</p>
+        </div>
+        <div class="location-map relative">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.8569513918064!2d8.915516289254208!3d38.92724697202969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e6df0d0a89eb4d%3A0x922a0d6b40d4c0d5!2sLa%20Perla%20Marina%20VILLA%20NURAGHE%20Blu%20home%20Sharing!5e0!3m2!1sen!2sit!4v1778146595580!5m2!1sen!2sit"
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#c1e5fb] px-16 pt-20 pb-12">
+        <div class="footer-grid max-w-7xl mx-auto mb-12 pb-12 border-b border-white/10"
+            style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem">
+            <div>
+                <div class="serif text-2xl text-[#042c8f] mb-4">Casa Spanu</div>
+                <p class="text-[#042c8f] text-sm leading-relaxed mb-2">Un angolo di paradiso a Santa Margherita di
+                    Pula,<br>dove la
+                    natura incontra il comfort.</p>
+                <p class="text-[#042c8f] text-sm leading-relaxed mb-6">Via Perla Marina, Loc. Santa Margherita — Pula
+                    (CA)<br>info@casaspanu.it<br>+39 348 3509574</p>
+                <div class="flex gap-4">
+                    <a href="#" class="text-[#042c8f] text-lg hover:text-white transition-colors"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-[#042c8f] text-lg hover:text-white transition-colors"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-[#042c8f] text-lg hover:text-white transition-colors"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-[#042c8f] text-lg hover:text-white transition-colors"><i
+                            class="fab fa-tripadvisor"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-xs tracking-widest uppercase text-[#042c8f] font-semibold mb-5">Alloggi</h4>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Piazzole</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Bungalow</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Chalet</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Disponibilità</a>
+            </div>
+            <div>
+                <h4 class="text-xs tracking-widest uppercase text-[#042c8f] font-semibold mb-5">Servizi</h4>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Spiaggia</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Sport
+                    acquatici</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Ristorante
+                    & Bar</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Animazione</a>
+            </div>
+            <div>
+                <h4 class="text-xs tracking-widest uppercase text-[#042c8f] font-semibold mb-5">Info</h4>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Chi
+                    siamo</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Come
+                    arrivare</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Regolamento</a>
+                <a href="#"
+                    class="block text-[#042c8f] no-underline text-sm mb-2 hover:text-[#f8e6a0] transition-colors">Contatti</a>
+            </div>
+        </div>
+        <div class="footer-bottom max-w-7xl mx-auto flex justify-between items-center">
+            <p class="text-xs text-[#042c8f]">© 2025 Casa Spanu. Tutti i diritti riservati.</p>
+            <p class="text-xs text-[#042c8f]">Privacy Policy · Cookie Policy</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
