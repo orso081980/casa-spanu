@@ -60,7 +60,7 @@ nav.scrolled .lang-selector .fi { border-color: rgba(0,51,153,0.2) !important; }
 .card:hover .card-img { transform: scale(1.04); }
 
 /* == BEACH BACKGROUND == */
-.beach-section { background: linear-gradient(to right, rgba(0,51,153,0.7) 0%, rgba(0,51,153,0.1) 60%), url('/images/pexels-francesco-ungaro-13113292.jpg') center/cover no-repeat; }
+.beach-section { background: linear-gradient(to right, rgba(0,51,153,0.7) 0%, rgba(0,51,153,0.1) 60%), url('images/pexels-francesco-ungaro-13113292.jpg') center/cover no-repeat; }
 
 /* == BOOKING INPUTS == */
 .booking-field input, .booking-field select { background: transparent; border: none; outline: none; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; width: 100%; }
