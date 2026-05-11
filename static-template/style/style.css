@@ -1,0 +1,98 @@
+/* == CSS CUSTOM PROPERTIES == */
+:root {
+    --sand: #E8DFD0;
+    --pine: #2D4A3E;
+    --water: #5B8FA8;
+    --foam: #F5F1EB;
+    --dusk: #8B6F5A;
+    --night: #1A2E28;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'DM Sans', sans-serif; background: var(--foam); color: var(--night); overflow-x: hidden; }
+h1, h2, h3, .serif { font-family: 'Cormorant Garamond', serif; }
+
+/* == NAV SCROLLED == */
+nav.scrolled { background: rgba(245,241,235,0.95); backdrop-filter: blur(12px); padding: 1rem 3rem; box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+nav.scrolled .nav-logo { color: var(--pine) !important; }
+nav.scrolled .nav-links a { color: var(--pine); }
+nav.scrolled .nav-cta { background: var(--pine) !important; color: white !important; }
+nav.scrolled .hamburger span { background: var(--pine) !important; }
+nav.scrolled .lang-selector .fi { border-color: rgba(45,74,62,0.3) !important; }
+
+/* == HAMBURGER == */
+.hamburger { display: none; flex-direction: column; cursor: pointer; gap: 5px; position: fixed; top: 1.5rem; right: 3rem; z-index: 1002; }
+.hamburger span { display: block; width: 24px; height: 2px; background: #1A2E28; transition: all 0.3s; border-radius: 2px; }
+.hamburger.active span:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); background: var(--pine); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); background: var(--pine); }
+
+/* == MOBILE MENU == */
+.mobile-menu { position: fixed; top: 56px; left: -100%; width: 100%; height: calc(100vh - 56px); background: var(--foam); z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2rem; transition: left 0.3s ease; }
+.mobile-menu.open { left: 0; }
+
+/* == LANGUAGE DROPDOWN == */
+.lang-selector { position: relative; cursor: pointer; }
+.lang-selector .fi { border: 1px solid rgba(255,255,255,0.35); border-radius: 2px; display: inline-block; }
+.lang-dropdown { position: absolute; top: 100%; right: 0; margin-top: 0.5rem; display: flex; flex-direction: column; gap: 0.4rem; opacity: 0; visibility: hidden; transition: opacity 0.2s, visibility 0.2s; background: white; padding: 0.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border-radius: 2px; z-index: 200; }
+.lang-selector:hover .lang-dropdown { opacity: 1; visibility: visible; }
+.lang-dropdown .fi { border: 1px solid rgba(45,74,62,0.2); transition: opacity 0.2s; }
+.lang-dropdown .fi:hover { opacity: 0.7; }
+
+/* == HERO == */
+.hero { height: 700px; position: relative; display: flex; align-items: flex-end; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(26,46,40,0.2) 0%, rgba(26,46,40,0.6) 100%), url('../images/pic-6.jpg') center/cover no-repeat; transform: scale(1.05); animation: heroZoom 8s ease-out forwards; }
+@keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1); } }
+.hero-tag::before { content: ''; position: absolute; left: 0; top: 50%; width: 2rem; height: 1px; background: rgba(255,255,255,0.6); }
+.scroll-line { width: 1px; height: 4rem; background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.5)); animation: scrollPulse 2s ease-in-out infinite; }
+@keyframes scrollPulse { 0%,100% { opacity: 0.4; } 50% { opacity: 1; } }
+
+/* == PHOTO GRID == */
+.photo-grid { display: grid; grid-template-columns: 1.4fr 1fr; grid-template-rows: 320px 220px; gap: 1rem; }
+.photo-grid img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-grid .span-2 { grid-column: 1/2; grid-row: 1/3; }
+.photo-grid .top-right { grid-column: 2/3; grid-row: 1/2; }
+.photo-grid .bot-right { grid-column: 2/3; grid-row: 2/3; }
+.divider-leaf { width: 1px; height: 5rem; background: linear-gradient(to bottom, transparent, var(--pine), transparent); margin: 2rem 0; }
+
+/* == CARD HOVER == */
+.card-img { transition: transform 0.5s; }
+.card:hover .card-img { transform: scale(1.04); }
+
+/* == BEACH BACKGROUND == */
+.beach-section { background: linear-gradient(to right, rgba(26,46,40,0.7) 0%, rgba(26,46,40,0.1) 60%), url('../images/pic-8.jpg') center/cover no-repeat; }
+
+/* == BOOKING INPUTS == */
+.booking-field input, .booking-field select { background: transparent; border: none; outline: none; color: white; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; width: 100%; }
+.booking-field select option { background: var(--night); }
+
+/* == FADE-IN == */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* == MOBILE 1000px == */
+@media (max-width: 1000px) {
+    nav { padding: 1rem 1.5rem !important; background: var(--foam) !important; }
+    nav .nav-logo { color: var(--pine) !important; }
+    nav .nav-cta { background: var(--pine) !important; color: white !important; }
+    .nav-links { display: none !important; }
+    .hamburger { display: flex !important; top: 1.2rem; right: 1.5rem; }
+    .hero { height: 700px; }
+    .hero-content { padding: 3rem 2rem !important; }
+    .section-intro { grid-template-columns: 1fr !important; gap: 3rem; padding: 5rem 2rem; }
+    .photo-grid { grid-template-columns: 1fr !important; grid-template-rows: auto !important; }
+    .photo-grid .span-2, .photo-grid .top-right, .photo-grid .bot-right { grid-column: auto; grid-row: auto; height: 220px; }
+    .stats-strip { grid-template-columns: 1fr 1fr !important; }
+    .cards-grid { grid-template-columns: 1fr !important; }
+    .servizi-grid, .servizi-grid.second-row { grid-template-columns: 1fr !important; }
+    .booking-bar { grid-template-columns: 1fr !important; }
+    .booking-field { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.12); }
+    .reviews-grid { grid-template-columns: 1fr !important; }
+    .location-section { grid-template-columns: 1fr !important; height: auto; }
+    .location-map { min-height: 400px; }
+    .footer-grid { grid-template-columns: 1fr !important; gap: 2rem; }
+    .footer-bottom { flex-direction: column !important; gap: 1rem; text-align: center; }
+}
+@media (max-width: 500px) {
+    .stats-strip { grid-template-columns: 1fr !important; }
+}
